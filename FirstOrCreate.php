@@ -3,13 +3,11 @@
  * Методы для поиска записи (модели) или создания если не найдено
  * Идея позаимствована из Ларавел фреймворк
  * @link https://github.com/oleg-p/first-or-create
- * @
  */
 
-namespace common\traits\models;
+namespace olegsoft\firstOrCreate;
 
-
-//use yii\db\ActiveRecord;
+use yii\db\ActiveRecord;
 
 trait FirstOrCreate
 {
