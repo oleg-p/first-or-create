@@ -5,7 +5,8 @@
   "description": "Trait for ActiveRecord",
   "type": "yii2-extension",
   "require": {
-    "php": ">=5.4.0"
+    "php": ">=5.4.0",
+    "yiisoft/yii2": "2.0.*"
   },
   "license": "MIT",
   "authors": [
