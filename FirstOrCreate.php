@@ -16,7 +16,7 @@ trait FirstOrCreate
      * если модель не найдена, то создаём и возвращаем новую модель
      *
      * @param array $attributes
-     * @return ActiveRecord FirstOrCreate
+     * @return ActiveRecord
      */
     public static function firstOrNew($attributes)
     {
