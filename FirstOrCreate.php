@@ -20,10 +20,10 @@ trait FirstOrCreate
      */
     public static function firstOrNew($attributes)
     {
-        $model = self::findOne($attributes);
+        $model = static::findOne($attributes);
 
         if($model === null){
-            $model = new self($attributes);
+            $model = new static($attributes);
         }
 
         return $model;
@@ -39,7 +39,7 @@ trait FirstOrCreate
      */
     public static function firstOrCreate($attributes, $runValidation = false)
     {
-        $model = self::firstOrNew($attributes);
+        $model = static::firstOrNew($attributes);
 
         if($model->isNewRecord){
             $model->save($runValidation);
