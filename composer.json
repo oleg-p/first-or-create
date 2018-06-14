@@ -2,7 +2,7 @@
   "name": "olegsoft/first-or-create",
   "version": "1.0.0",
   "keywords": ["yii2", "ActiveRecord", "trait"],
-  "description": "Trait for Yii2 ActiveRecord",
+  "description": "Trait for Yii2 ActiveRecord. Search for a model ActiveRecord or create a new one in case of failure",
   "type": "yii2-extension",
   "require": {
     "php": ">=5.4.0",
