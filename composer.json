@@ -2,7 +2,7 @@
   "name": "olegsoft/first-or-create",
   "version": "1.0.0",
   "keywords": ["yii2", "ActiveRecord", "trait"],
-  "description": "Trait for ActiveRecord",
+  "description": "Trait for Yii2 ActiveRecord",
   "type": "yii2-extension",
   "require": {
     "php": ">=5.4.0",
@@ -15,6 +15,7 @@
       "email": "oleg@portalnews.ru"
     }
   ],
+  "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
       "olegsoft\\firstOrCreate\\": ""
