@@ -20,7 +20,7 @@ trait FirstOrCreate
      */
     public static function firstOrNew($attributes)
     {
-        $model = static::findOne($attributes);
+        $model = static::find($attributes)->limit(1)->one();
 
         if($model === null){
             $model = new static($attributes);
