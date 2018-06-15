@@ -35,14 +35,14 @@ use app\models\ModelTable;
     $model = ModelTable::firstOrNew(['id' => 50], ['sort' => 10]);
     //Возвращает один экземпляр модели ActiveRecord, соответствующий ограничениям значений массива атрибутов 
     //или возвращает новый экземпляр модели ActiveRecord со свойствами, 
-    //соответсвующими значениям массива $attributes + значениям массива $values 
+    //соответствующими значениям массива $attributes + значениям массива $values 
     
     //public static function firstOrCreate($attributes, $values = [])
     $model = ModelTable::firstOrCreate(['id' => 50]);
     $model = ModelTable::firstOrCreate(['id' => 50], ['sort' => 10]);
     //Возвращает один экземпляр модели ActiveRecord, соответствующий ограничениям значений массива атрибутов
     //или возвращает новый экземпляр модели ActiveRecord со свойствами,
-    //соответсвующими значениям массива $attributes + значениям массива $values и сохраняет его
+    //соответствующими значениям массива $attributes + значениям массива $values и сохраняет его
     
     //public static function updateOrCreate($attributes, $values = [])
     $model = ModelTable::updateOrCreate(['id' => 50]);
