@@ -15,15 +15,16 @@ trait FirstOrCreate
      * Возвращает модель по переданным атрибутам,
      * если модель не найдена, то создаём и возвращаем новую модель
      *
-     * @param array $attributes
+     * @param array $attributes атрибуты для поиска
+     * @param array $values     значения для создания новой модели
      * @return ActiveRecord
      */
-    public static function firstOrNew($attributes)
+    public static function firstOrNew($attributes, $values = [])
     {
-        $model = static::find($attributes)->limit(1)->one();
+        $model = static::find()->andWhere($attributes)->limit(1)->one(); //здесь неверно
 
         if($model === null){
-            $model = new static($attributes);
+            $model = new static($attributes + $values);
         }
 
         return $model;
@@ -33,13 +34,14 @@ trait FirstOrCreate
      * Возвращает модель по переданным атрибутам,
      * если модель не найдена, то создаём, сохраняем и возвращаем новую модель
      *
-     * @param array $attributes
+     * @param array $attributes     атрибуты для поиска
+     * @param array $values         значения для создания новой модели
      * @param bool $runValidation
      * @return ActiveRecord
      */
-    public static function firstOrCreate($attributes, $runValidation = false)
+    public static function firstOrCreate($attributes, $values = [], $runValidation = false)
     {
-        $model = static::firstOrNew($attributes);
+        $model = static::firstOrNew($attributes, $values);
 
         if($model->isNewRecord){
             $model->save($runValidation);
